@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Simple Calculator </title>
+</head>
+  <body>
+    <style>
+    body {
+    margin: 10px;
+    padding: 20px;
+    background-color:#DEF5E5;
+    }
+    .calculator{
+      height: 200px;
+      width: 500px;
+      box-shadow: 0 8px 50px -7px black;
+	    border-style: groove;
+	    border-width: 1px;
+	    border-radius: 5px;
+	    background-color: #8EC3B0;
+	    text-align: center;
+	    font-size: 20px;
+    }
+	</style>
+	<div class="calculator">
+	<label>Enter First number</label>
+		<input type="text" id="num1" value="0"><br>
+	<label> Enter Second number</label>
+		<input type="text" id="num2" vaue="0"><br>
+		<button type="button" onclick="add()">Add</button>
+		<button type="button" onclick="difference()">Subtract</button>
+		<button type="button" onclick="product()">Multiplicaton</button>
+		<button type="button" onclick="division()">Divide</button>
+		<button type="button" onclick="reset()">Reset</button>
+		<p id="result"></p>
+	</div>
+	<script>
+		function add(){
+			var a= document.getElementById("num1").value;
+			var b= document.getElementById("num2").value;
+			var c= parseInt(a) + parseInt(b);
+		document.getElementById("result").innerHTML="Sum of number is:" +c;
+		}
+		function difference(){
+			var a= document.getElementById("num1").value;
+			var b= document.getElementById("num2").value;
+			var c= parseInt(a) - parseInt(b);
+		document.getElementById("result").innerHTML="Difference of number is:" +c;
+		}
+		function product(){
+			var a= document.getElementById("num1").value;
+			var b= document.getElementById("num2").value;
+			var c= parseInt(a) * parseInt(b);
+		document.getElementById("result").innerHTML="Product of number is:" +c;
+		}
+		function division(){
+			var a= document.getElementById("num1").value;
+			var b= document.getElementById("num2").value;
+			var c= parseInt(a) /  parseInt(b);
+		document.getElementById("result").innerHTML="Qoutient of number is:" +c;
+		}
+		function reset(){
+			document.getElementById("num1").value="0";
+			document.getElementById("num2").value="0";
+			document.getElementById("result").innerHTML="Sum of number is:" + "0";
+			document.getElementById("result").innerHTML="Difference of number is:" + "0";
+			document.getElementById("result").innerHTML="Product of number is:" + "0";
+			document.getElementById("result").innerHTML="Qoutient of number is:" + "0";
+			document.getElementById("result").innerHTML=" ";
+			}
+	</script>
+</body>
+</html>
